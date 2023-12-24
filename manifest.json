@@ -1,11 +1,17 @@
 {
-    "name": "Upcoming Toronto Concerts",
-    "version": "1.0.0",
-    "description": "This is an extension to look up concerts coming to Toronto",
-    "manifest_version": 3,
-    "author": "Tiffany J",
-    "action": {
-        "default_popup": "index.html",
-        "default_title": "Upcoming Toronto Concerts"
+  "manifest_version": 2,
+  "name": "Roblox Speeltijd Tracker",
+  "version": "1.0",
+  "description": "Houdt bij hoe lang je op Roblox hebt gespeeld.",
+  "permissions": ["storage", "activeTab"],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.roblox.com/*"],
+      "js": ["content.js"]
     }
+  ]
 }
